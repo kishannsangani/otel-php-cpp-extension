@@ -7,5 +7,3 @@ services:
     container_name: ubuntu20
     ports: 
       - "7200:80"
-    volumes:
-      - ./hello_world_interceptor:/home/hello_world_interceptor

@@ -1,4 +1,4 @@
-# Step to build
+### Step to build
 
 ```
 docker-compose up -d --build

@@ -2,8 +2,8 @@ FROM ubuntu:20.04
 
 WORKDIR /home
 
-ADD hello_world_interceptor /home/hello_world_interceptor/
-ADD sample /home/sample/
+ADD interceptors /home/interceptors/
+ADD example /home/example/
 
 RUN apt-get update && \
 	# Install PHP
@@ -21,7 +21,7 @@ RUN apt-get update && \
 	echo $? && \
 	make install && \
 	# Build extensions
-	cd /home/hello_world_interceptor && \
+	cd /home/interceptors && \
 	make clean && \
 	make all && \
 	make install && \
@@ -32,7 +32,7 @@ RUN apt-get update && \
 	mv composer.phar /usr/local/bin/composer && \
 	chmod +x /usr/local/bin/composer && \
 	apt-get update -y && \
-	cd /home/sample && \
+	cd /home/example && \
 	composer require "php-http/guzzle7-adapter" && \
 	composer require open-telemetry/opentelemetry
 

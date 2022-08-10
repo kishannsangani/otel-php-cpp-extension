@@ -18,7 +18,7 @@
 #   are automatically generated
 #
 
-NAME                =   hello_world_interceptor
+NAME                =   otel_php_interceptors
 
 #
 #   Php.ini directories

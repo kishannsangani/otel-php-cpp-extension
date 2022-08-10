@@ -1,0 +1,11 @@
+version: "1"
+
+services:
+  ubuntu20: 
+    build: .
+    command: ["sleep", "6h"]
+    container_name: ubuntu20
+    ports: 
+      - "7200:80"
+    volumes:
+      - ./hello_world_interceptor:/home/hello_world_interceptor

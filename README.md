@@ -2,8 +2,8 @@
 
 ```
 docker-compose up -d --build
-docker exec -it ubuntu20 bash -l
+docker exec -it ubuntu20_php_cpp bash -l
 php -m
-cd sample
+cd example
 php sample.php
 ```

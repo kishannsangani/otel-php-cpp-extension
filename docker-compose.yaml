@@ -1,9 +1,7 @@
-version: "1"
-
 services:
-  ubuntu20: 
+  ubuntu20_php_cpp:
     build: .
     command: ["sleep", "6h"]
-    container_name: ubuntu20
+    container_name: ubuntu20_php_cpp
     ports: 
       - "7200:80"
